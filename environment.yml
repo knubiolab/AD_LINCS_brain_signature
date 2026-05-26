@@ -1,0 +1,22 @@
+name: ad_lincs_signature
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base>=4.2
+  - r-optparse
+  - r-data.table
+  - r-dplyr
+  - r-tidyr
+  - r-stringr
+  - r-ggplot2
+  - r-ggpubr
+  - r-jsonlite
+  - r-readxl
+  - r-abind
+  - bioconductor-pharmacogx
+  - bioconductor-cmapr
+  - bioconductor-keggrest
+  - bioconductor-biobase
+  - bioconductor-summarizedexperiment

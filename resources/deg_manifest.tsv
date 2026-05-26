@@ -1,0 +1,6 @@
+signature_id	up_file	down_file	down_top_n	enabled
+Astrocyte	Prefrontal_cortex_DEG/Astrocyte_up.txt	Prefrontal_cortex_DEG/Astrocyte_down.txt	NA	TRUE
+Excitatory_neuron	Prefrontal_cortex_DEG/Excitatory_neuron_up.txt	Prefrontal_cortex_DEG/Excitatory_neuron_down.txt	150	TRUE
+Inhibitory_neuron	Prefrontal_cortex_DEG/Inhibitory_neuron_up.txt	Prefrontal_cortex_DEG/Inhibitory_neuron_down.txt	NA	TRUE
+Microglia	Prefrontal_cortex_DEG/Microglia_up.txt	Prefrontal_cortex_DEG/Microglia_down.txt	NA	TRUE
+Oligocyte	Prefrontal_cortex_DEG/Oligocyte_up.txt	Prefrontal_cortex_DEG/Oligocyte_down.txt	NA	TRUE
