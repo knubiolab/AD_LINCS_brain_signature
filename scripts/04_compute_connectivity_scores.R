@@ -20,8 +20,11 @@ option_list <- list(
               help = "Number of permutations used by PharmacoGx connectivityScore."),
   make_option("--rank-direction", type = "character", default = "high",
               help = "Use high if larger connectivity means stronger disease similarity; use low otherwise.")
+  make_option("--seed", type = "integer", default = 20240601,
+            help = "Random seed for fgsea permutation-based connectivity scoring.")
 )
 opt <- parse_args(OptionParser(option_list = option_list))
+set.seed(opt$seed)
 
 if (!opt$rank_direction %in% c("high", "low")) {
   stop("--rank-direction must be high or low.")
@@ -110,6 +113,7 @@ make_deg_signature <- function(up_path, down_path, cmap_genes, down_top_n = NA) 
 }
 
 compute_connectivity <- function(sig_mat, deg, nperm) {
+  if (!is.null(seed)) set.seed(seed)
   common <- intersect(rownames(sig_mat), rownames(deg))
   if (length(common) < 10) {
     warning("Fewer than 10 overlapping genes. Returning NA scores.")
@@ -217,8 +221,8 @@ for (i in seq_len(nrow(manifest))) {
   for (axis_name in names(axes)) {
     genes <- intersect(axes[[axis_name]], rownames(perturbation_sig))
     axis_mat <- perturbation_sig[genes, , drop = FALSE]
-
-    score <- compute_connectivity(axis_mat, deg, nperm = opt$nperm)
+    axis_seed <- opt$seed + i * 100L + match(axis_name, names(axes))
+    score <- compute_connectivity(axis_mat, deg, nperm = opt$nperm, seed = axis_seed)
     score$signature_id <- signature_id
     score$axis <- axis_name
     score$n_axis_genes <- nrow(axis_mat)
