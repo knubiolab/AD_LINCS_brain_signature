@@ -20,7 +20,8 @@ AD_LINCS_brain_signature/
 │   ├── 02_build_perturbation_signatures_by_drug.R
 │   ├── 03_merge_perturbation_signatures.R
 │   ├── 04_compute_connectivity_scores.R
-│   └── 05_plot_cluster6_results.R
+|   ├── 05_cluster_tier2_compounds.R
+│   └── 06_plot_cluster6_results.R
 ├── resources/
 │   ├── deg_manifest.tsv
 │   ├── PPARG_PPARgene_targets.txt
