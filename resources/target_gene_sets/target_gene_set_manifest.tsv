@@ -1,0 +1,9 @@
+target_file	source	status	note
+resources/target_gene_sets/PPARG_PPARgene_targets.txt	""	not_found	Place this curated source gene-list file manually if automatic matching failed.
+resources/target_gene_sets/PPARG_ChEA_targets.txt	/ndata/home/khj/R/PPARG_NR3C1_targetgenes/PPARG_ChEA_Transcription_Factor_Targets.txt	copied	Matched regex: PPARG.*ChEA|ChEA.*PPARG
+resources/target_gene_sets/PPARG_JASPAR_2025_targets.txt	/ndata/home/khj/R/PPARG_NR3C1_targetgenes/PPARG_JASPAR_Predicted_Human_Transcription_Factor_Targets_2025.txt	copied	Matched regex: PPARG.*JASPAR|JASPAR.*PPARG
+resources/target_gene_sets/NR3C1_ChEA_targets.txt	/ndata/home/khj/R/PPARG_NR3C1_targetgenes/NR3C1_ChEA_Transcription_Factor_Targets.txt	copied	Matched regex: NR3C1.*ChEA|ChEA.*NR3C1|GR.*ChEA|ChEA.*GR
+resources/target_gene_sets/NR3C1_ENCODE_targets.txt	/ndata/home/khj/R/PPARG_NR3C1_targetgenes/NR3C1_ENCODE_Transcription_Factor_Targets.txt	copied	Matched regex: NR3C1.*ENCODE|ENCODE.*NR3C1|GR.*ENCODE|ENCODE.*GR
+resources/target_gene_sets/NR3C1_JASPAR_2025_targets.txt	/ndata/home/khj/R/PPARG_NR3C1_targetgenes/NR3C1_JASPAR_Predicted_Human_Transcription_Factor_Targets_2025.txt	copied	Matched regex: NR3C1.*JASPAR|JASPAR.*NR3C1|GR.*JASPAR|JASPAR.*GR
+resources/target_gene_sets/BCHE_KEGG_hsa04725_cholinergic_synapse.txt	KEGG hsa04725	regenerated	Regenerated from KEGG pathway hsa04725
+resources/target_gene_sets/VEGFR_KEGG_hsa04370_VEGF_signaling.txt	KEGG hsa04370	regenerated	Regenerated from KEGG pathway hsa04370

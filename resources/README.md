@@ -1,31 +1,15 @@
-# Resources
+# Resource files
 
-Required files:
+This directory contains small input files required to reproduce the AD connectivity and target-axis analyses.
 
-- `deg_manifest.tsv`: Manifest for Alzheimer's disease DEG signatures.
-- `Prefrontal_cortex_DEG/*_up.txt` and `Prefrontal_cortex_DEG/*_down.txt`: DEG gene lists. Each file should contain one gene symbol per line.
-- `Cmap_genes.txt`: CMAP gene annotation table with at least `Entrez.ID`, `Symbol`, and `Type` columns.
-- `PPARG_PPARgene_targets.txt`: PPARG target symbols collected from PPARgene.
-- `cluster6_drugs.txt`: Final cluster 6 drug names or perturbagen IDs, one per line.
+## Files
 
-Optional target gene files:
+- `Cmap_genes.txt`: original LINCS/CMap gene annotation table.
+- `Cmap_genes_L1000_BING.tsv`: genes retained for landmark and best inferred gene-space matching.
+- `AD_DEG/`: standardized copies of AD up/down DEG query lists.
+- `deg_manifest.tsv`: metadata and standardized paths for each AD DEG query signature.
+- `AD_input_DEG_up_down_count_summary.tsv`: raw, CMap/BING-matched, and actually used up/down DEG counts.
+- `target_gene_sets/`: target-axis input gene sets for PPARG, NR3C1/GR, BChE, and VEGFR.
+- `resource_manifest.tsv`: source paths and generation notes for copied/generated files.
 
-If available, place Enrichr-style JSON files under `resources/target_gene_sets/`:
-
-```text
-resources/target_gene_sets/
-├── PPARG_ChEA_Transcription_Factor_Targets.txt
-├── PPARG_JASPAR_Predicted_Human_Transcription_Factor_Targets_2025.txt
-├── NR3C1_ChEA_Transcription_Factor_Targets.txt
-├── NR3C1_ENCODE_Transcription_Factor_Targets.txt
-└── NR3C1_JASPAR_Predicted_Human_Transcription_Factor_Targets_2025.txt
-```
-
-If local BCHE or VEGFR target files are available, they can be supplied as:
-
-```text
-resources/BCHE_targets.txt
-resources/VEGFR_targets.txt
-```
-
-Otherwise, the connectivity script attempts to retrieve BCHE and VEGFR pathway genes from KEGG using `KEGGREST`.
+The files were collected using `scripts/00_collect_input_files_for_repo.R`.
