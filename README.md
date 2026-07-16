@@ -144,18 +144,7 @@ Connectivity is computed for AD DEG query signatures across five predefined targ
 
 The random seed used for permutation-based scoring is recorded in the output parameter file.
 
-### 5. Reproduce Tier 1 candidate ranking
-
-```bash
-Rscript scripts/07_compute_tier1_rankings.R \
-  --scores-dir results \
-  --resources-dir resources \
-  --out-dir results/tier1_rankings
-```
-
-Tier 1 ranking summarizes disease similarity and positive-control drug similarity across reconstructed references. Self-connectivity of positive-control drugs is excluded before calculating mean drug similarity.
-
-### 6. Reproduce Tier 2 BR-focused clustering
+### 5. Reproduce Tier 2 BR-focused clustering
 
 ```bash
 Rscript scripts/05_cluster_tier2_compounds.R \
