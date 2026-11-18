@@ -19,7 +19,7 @@
 #   --signature-rds perturbation_sig_for_NEU_NPC_only.rds \
 #   --candidate-rds drugs_candidate_NEU_NPC.rds \
 #   --out-dir results/tier2_clustering \
-#   --seed 20240602 \
+#   --seed 123 \
 #   --k 11 \
 #   --cluster-id 6
 
@@ -60,7 +60,7 @@ option_list <- list(
   make_option(
     "--seed",
     type = "integer",
-    default = 20240602,
+    default = 123,
     help = "Random seed for k-means clustering and k-selection diagnostics. [default: %default]"
   ),
   make_option(
@@ -72,7 +72,7 @@ option_list <- list(
   make_option(
     "--nstart",
     type = "integer",
-    default = 100,
+    default = 1,
     help = "Number of random starts for k-means. [default: %default]"
   ),
   make_option(
