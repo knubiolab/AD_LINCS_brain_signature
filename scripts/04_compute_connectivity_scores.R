@@ -16,7 +16,7 @@ option_list <- list(
               help = "Directory containing deg_manifest.tsv, Cmap_genes.txt, target gene files, and DEG files."),
   make_option("--out-dir", type = "character", default = file.path("results", "connectivity_scores"),
               help = "Output directory."),
-  make_option("--nperm", type = "integer", default = 100,
+  make_option("--nperm", type = "integer", default = 1000,
               help = "Number of permutations used by PharmacoGx connectivityScore."),
   make_option("--rank-direction", type = "character", default = "high",
               help = "Use high if larger connectivity means stronger disease similarity; use low otherwise.")
